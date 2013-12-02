@@ -32,9 +32,9 @@ public class BusinessJsonDeserializer implements JsonDeserializer<Business> {
 		if (jsonElement != null)
 			business.business_id = jsonElement.getAsString();
 
-		jsonElement = jsonObject.get("full_address");
-		if (jsonElement != null)
-			business.full_address = jsonElement.getAsString();
+		// jsonElement = jsonObject.get("full_address");
+		// if (jsonElement != null)
+		// business.full_address = jsonElement.getAsString();
 
 		jsonElement = jsonObject.get("city");
 		if (jsonElement != null)
@@ -71,13 +71,13 @@ public class BusinessJsonDeserializer implements JsonDeserializer<Business> {
 		JsonArray catArrays = jsonObject.get("categories").getAsJsonArray();
 		if (catArrays != null) {
 			for (int i = 0, size = catArrays.size(); i < size; i++) {
-				String category = catArrays.get(i).getAsString();
-				Category c = categories.get(category);
-				if (c == null) {
-					categories.put(category,
-							new Category(category, categories.size() + 1));
+				String category_name = catArrays.get(i).getAsString();
+				Category cat_obj = categories.get(category_name);
+				if (cat_obj == null) {
+					cat_obj = new Category(category_name, categories.size() + 1);
 				}
-				business.categories.add(c);
+				categories.put(category_name, cat_obj);
+				business.categories.add(cat_obj);
 			}
 		}
 

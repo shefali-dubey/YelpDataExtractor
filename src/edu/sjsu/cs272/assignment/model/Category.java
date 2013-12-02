@@ -2,11 +2,16 @@ package edu.sjsu.cs272.assignment.model;
 
 import java.io.Serializable;
 
+import edu.sjsu.cs272.assignment.util.CommonUtils;
+
 /*
- * Table : Category
+ * Table : CATEGORY
  */
 public class Category implements Serializable {
 	private static final long serialVersionUID = -4775996034505988253L;
+	private static final String ID = "ID";
+	private static final String NAME = "NAME";
+	private static final String TABLE_NAME = "CATEGORY";
 	public int id = -1;
 	public String name;
 
@@ -19,19 +24,20 @@ public class Category implements Serializable {
 	}
 
 	@Override
-	public boolean equals(Object obj) {
-		if (obj != null && obj instanceof Category) {
-			Category c = (Category) obj;
-			if (c.name.equals(name)) {
-				return true;
-			}
-		}
-		return false;
+	public String toString() {
+		return new StringBuilder().append(id).append(",")
+				.append(CommonUtils.getString(name).replaceAll(",", "")).append("\n").toString();
 	}
-	
-	@Override
-	public int hashCode() {
-		return name.hashCode();
+
+	public static String getCsvHeaderName() {
+		return new StringBuilder().append(ID).append(",").append(NAME)
+				.append("\n").toString();
+	}
+
+	public static String getDDL() {
+		return new StringBuilder("CREATE TABLE ").append(TABLE_NAME)
+				.append(" ( ").append(ID).append(" INT ,").append(NAME)
+				.append(" VARCHAR(50));").toString();
 	}
 
 }
