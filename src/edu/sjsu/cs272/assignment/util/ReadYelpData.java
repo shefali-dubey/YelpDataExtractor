@@ -25,6 +25,7 @@ import edu.sjsu.cs272.assignment.util.gson.UserJsonDeserializer;
 
 public class ReadYelpData {
 
+	// Input yelp json directory
 	private static final String YELP_DIR_PATH = "/Users/shefali/Documents/personal/shefali_project/yelp_phoenix_academic_dataset_mac/json/";
 	private static final String YELP_BUSINESS_PATH = YELP_DIR_PATH
 			+ "yelp_academic_dataset_business.json";
