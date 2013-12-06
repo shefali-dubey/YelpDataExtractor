@@ -1,28 +1,31 @@
 YelpDataExtractor
-
+==
 This utility is used to convert yelp data in json to csv data which can be imported to the blu cloud.
-Software Required
 
-    JDK 7
-    Eclipse IDE
+Software Required
+--
+1. JDK 7
+2. Eclipse IDE
 
 Input Data
-
+--
 Yelp Academic dataset can be downloaded from https://www.yelp.com/academic_dataset. Unzip the data and place it at location @ YELP_DATA_FOLDER
+
 Project Structure
-
+--
 src :- main java source of the project lib : jar library dependencies for the project blu_data_files : csv blu data files used to upload the data to blu cloud
-Installation Instructions
 
-    Import the project as Java Project
-    Include the jar libraries present @ lib folder to the classpath of the project
-    Update ReadYelpData.java , set YELP_DIR_PATH point to the full path of the YELP_DATA_FOLDER
-    Update ReadYelpData.java , set YELP_OUTPUT_DIR_PATH point to the full path of the output folder
-    Run ReadYelpData as a Java Application through Eclipse. It will generate csv data files in YELP_OUTPUT_DIR_PATH folder which can be used to upload data to blu cloud.
-    When execution for ReadYelpData is complete it will also print the SQL DDL for the tables in the output console of Eclipse. Copy this DDL annd use it to create tables in blu cloud.
+Installation Instructions
+--
+1. Import the project as Java Project
+2. Include the jar libraries present @ lib folder to the classpath of the project
+3. Update ReadYelpData.java , set YELP_DIR_PATH point to the full path of the YELP_DATA_FOLDER
+4. Update ReadYelpData.java , set YELP_OUTPUT_DIR_PATH point to the full path of the output folder
+5. Run ReadYelpData as a Java Application through Eclipse. It will generate csv data files in YELP_OUTPUT_DIR_PATH folder which can be used to upload data to blu cloud.
+6. When execution for ReadYelpData is complete it will also print the SQL DDL for the tables in the output console of Eclipse. Copy this DDL annd use it to create tables in blu cloud.
 
 RUN OUTPUT
-
+--
 Number of businesses : 11537
 
 Number of Categories : 508
