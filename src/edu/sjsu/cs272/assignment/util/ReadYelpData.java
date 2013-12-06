@@ -25,7 +25,7 @@ import edu.sjsu.cs272.assignment.util.gson.UserJsonDeserializer;
 
 public class ReadYelpData {
 
-	private static final String YELP_DIR_PATH = "/Users/sabhinav/Documents/personal/shefali_project/yelp_phoenix_academic_dataset_mac/json/";
+	private static final String YELP_DIR_PATH = "/Users/shefali/Documents/personal/shefali_project/yelp_phoenix_academic_dataset_mac/json/";
 	private static final String YELP_BUSINESS_PATH = YELP_DIR_PATH
 			+ "yelp_academic_dataset_business.json";
 	private static final String YELP_CHECKIN_PATH = YELP_DIR_PATH
@@ -36,7 +36,7 @@ public class ReadYelpData {
 			+ "yelp_academic_dataset_review.json";
 
 	// Output paths
-	private static final String YELP_OUTPUT_DIR_PATH = "/Users/sabhinav/Documents/personal/shefali_project/yelp_phoenix_academic_dataset_mac/blu_data_files/";
+	private static final String YELP_OUTPUT_DIR_PATH = "/Users/shefali/Documents/personal/shefali_project/yelp_phoenix_academic_dataset_mac/blu_data_files/";
 	private static final String YELP_USER_OUTPUT_PATH = YELP_OUTPUT_DIR_PATH
 			+ "yelp_academic_dataset_user.csv";
 	private static final String YELP_REVIEW_OUTPUT_PATH = YELP_OUTPUT_DIR_PATH
